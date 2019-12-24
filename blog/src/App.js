@@ -1,28 +1,15 @@
 import React, { Component } from 'react'
-import { Layout } from 'antd'
+import Header from './components/Header/Header'
+import Sider from './components/Sider/Sider'
 
-const { Header, Content, Sider, Footer} = Layout;
 
 export default class App extends Component {
 	render() {
 		return (
-			<Layout>
-				<Header>
-					
-				</Header>
-				{/*  */}
-				<Sider>
-
-				</Sider>
-				{/*  */}
-				<Content>
-
-				</Content>
-				{/*  */}
-				<Footer>
-
-				</Footer>
-			</Layout>
+			<div>
+				<Header/>
+				<Sider/>
+			</div>
 		)
 	}
 }
