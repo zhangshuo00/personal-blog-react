@@ -1,0 +1,27 @@
+ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sider{
+    width: 20%;
+    float: left;
+    display: table-cell;
+    text-align: center;
+}
+.sider-avatar{
+    width: 100px;
+    border-radius: 50%;
+}
+.sider-uname{
+    padding-top: 20px;
+    line-height: 30px;
+    font-family: "SimHei";
+    font-weight: 700;
+}
+.sider-pages{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import {Input, Menu, Icon, Button} from 'antd'
 import "../../css/header.css"
 
@@ -9,15 +10,21 @@ export default class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-            current : 'home',
+            current : window.location.href.split('/').pop()==='' ? 'home' : window.location.href.split('/').pop(),
         }
     }
     
     handleClick = e =>{
-        console.log('click',e);
+        console.log('click',e.key);
         this.setState({
             current : e.key
         })
+        if(e.key === 'home'){
+            window.location = '/'
+        }else{
+            window.location = '/' + e.key;
+        }
+
     }
 
     render() {
@@ -40,15 +47,15 @@ export default class Header extends Component {
                             <Icon type="home"/>
                             首页
                         </Menu.Item>
-                        <Menu.Item key='hdd'>
+                        <Menu.Item key='archives'>
                             <Icon type="hdd"/>
                             归档
                         </Menu.Item>
-                        <Menu.Item key='folder'>
+                        <Menu.Item key='classification'>
                             <Icon type="folder"/>
                             分类
                         </Menu.Item>
-                        <Menu.Item key='user'>
+                        <Menu.Item key='about'>
                             <Icon type="user"/>
                             关于
                         </Menu.Item>
