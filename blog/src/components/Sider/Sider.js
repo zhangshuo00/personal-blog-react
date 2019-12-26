@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Collapse, Icon } from 'antd'
+import { Collapse, Icon, Tag } from 'antd'
 import '../../css/sider.css'
 
 const { Panel } = Collapse;
@@ -32,7 +32,7 @@ export default class Sider extends Component {
                 <Collapse
                     style={{marginTop:'25px'}}
                     bordered={false}
-                    defaultActiveKey={['1']}
+                    defaultActiveKey={['1','2']}
                     expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
                 >
                     <Panel header="热门文章" key="1" style={customPanelStyle}>
@@ -41,7 +41,14 @@ export default class Sider extends Component {
                             <li><a>实现简易的 VUE-MVVM</a></li>
                         </ul>
                     </Panel>
-                    <Panel header="标签" key="2" style={customPanelStyle}></Panel>
+                    <Panel header="标签" key="2" style={customPanelStyle}>
+                        <Tag style={{marginBottom:'8px'}} color="magenta">javascript</Tag>
+                        <Tag style={{marginBottom:'8px'}} color="red">react</Tag>
+                        <Tag style={{marginBottom:'8px'}} color="volcano">nodeJS</Tag>
+                        <Tag style={{marginBottom:'8px'}} color="gold">css3</Tag>
+                        <Tag style={{marginBottom:'8px'}} color="lime">HTML5</Tag>
+                        <Tag style={{marginBottom:'8px'}} color="green">项目开发</Tag>
+                        </Panel>
                 </Collapse>
                 
                 

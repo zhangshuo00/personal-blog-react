@@ -1,7 +1,6 @@
-.header-left{
-    width: 30%;
-    margin-right: 0;
-}
-.header-right{
-    width: 70%;
+
+.content{
+    width: 80%;
+    float: right;
+    /* padding-left: 20px; */
 }
