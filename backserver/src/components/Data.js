@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Managearticle extends Component {
+export default class Data extends Component {
     render() {
         return (
             <div>
-                Managearticle
+                data
             </div>
         )
     }
