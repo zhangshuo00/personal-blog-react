@@ -12,8 +12,8 @@ const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
 export default class App extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			collapsed : false
 		}
@@ -26,26 +26,7 @@ export default class App extends Component {
 	}
 	onClick = (e)=>{
 		console.log(e.key)
-		switch(e.key){
-			case '1':
-				window.location = '/';
-				break;
-			case '3':
-				window.location = '/addArticle';
-				break;
-			case '4':
-				window.location = '/manageArticle';
-				break;
-			case '6':
-				window.location = '/addTag';
-				break;
-			case '7':
-				window.location = '/manageTag';
-				break;
-			case '8':
-				window.location = '/user';
-				break;
-		}
+		window.location = e.key
 	}
   	render() {
     	return (
@@ -53,35 +34,27 @@ export default class App extends Component {
 			<Layout style={{ minHeight: '100vh' }}>
 				<Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
 					<Menu theme="dark" defaultSelectKeys={['1']} mode="inline">
-						<Menu.Item onClick={this.onClick} key="1">
+						<Menu.Item onClick={this.onClick} key="/">
 							<Icon type="home"/>
 							<span>首页</span>
 						</Menu.Item>
-						<SubMenu
-							key="2"
-							title={
-								<span>
-									<Icon type="file"/>
-									<span>文章</span>
-								</span>
-							}
-						>
-							<Menu.Item onClick={this.onClick} key="3">新增文章</Menu.Item>
-							<Menu.Item onClick={this.onClick} key="4">管理文章</Menu.Item>
-						</SubMenu>
-						<SubMenu 
-							key="5"
-							title={
-								<span>
-									<Icon type="pie-chart"/>
-									<span>分类</span>
-								</span>
-							}
-						>
-							<Menu.Item onClick={this.onClick} key="6">新增分类</Menu.Item>
-							<Menu.Item onClick={this.onClick} key="7">管理分类</Menu.Item>
-						</SubMenu>
-						<Menu.Item onClick={this.onClick} key="8">
+						<Menu.Item onClick={this.onClick} key="/addArticle">
+							<Icon type="edit"/>
+							<span>新增文章</span>
+						</Menu.Item>
+						<Menu.Item onClick={this.onClick} key="/manageArticle">
+							<Icon type="folder"/>
+							<span>管理文章</span>
+						</Menu.Item>
+						<Menu.Item onClick={this.onClick} key="/addTag">
+							<Icon type="tag"/>
+							<span>新增分类</span>
+						</Menu.Item>
+						<Menu.Item onClick={this.onClick} key="/manageTag">
+							<Icon type="tags"/>
+							<span>管理分类</span>
+						</Menu.Item>
+						<Menu.Item onClick={this.onClick} key="/user">
 							<Icon type="user"/>
 							<span>用户</span>
 						</Menu.Item>
