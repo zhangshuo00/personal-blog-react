@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { List, Form, Input, Tag, Button, Icon } from 'antd'
 import Editor from 'for-editor'
-import MyTag from './MyTag'
 
 const { CheckableTag } = Tag;
 
