@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Avatar, Divider, Icon } from 'antd'
+import { MailOutlined } from '@ant-design/icons';
+import { Avatar, Divider } from 'antd';
 import '../../css/about.css'
 
 
@@ -16,11 +17,11 @@ export default class About extends Component {
                 <ul>
                     <li>姓名：张朔</li>
                     <li>学历专业：本科 软件工程</li>
-                    <li>联系方式：<Icon style={{marginRight:'5px'}} type="mail"/><a href="mailto:443494891@qq.com">443494891@qq.com</a></li>
+                    <li>联系方式：<MailOutlined style={{marginRight:'5px'}} /><a href="mailto:easonzhang443@qq.com">easonzhang443@qq.com</a></li>
                     <li>现居地：石家庄</li>
                     <li>其他博客地址：<a href="https://zhangshuo00.github.io/">hexo博客</a><a style={{paddingLeft:'10px'}} href="https://juejin.im/user/5dbd775de51d456e4871ae6f">掘金主页</a></li>
                 </ul>
             </div>
-        )
+        );
     }
 }

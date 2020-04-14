@@ -7,6 +7,7 @@ import Home from './components/Content/Home'
 import Archives from './components/Content/Archives'
 import Classification from './components/Content/Classification'
 import About from './components/Content/About'
+import Essay from './components/Content/Essay'
 
 
 export default class App extends Component {
@@ -20,6 +21,7 @@ export default class App extends Component {
 						<Route exact path="/" component={Home}/>
 						<Route path="/archives" component={Archives}/>
 						<Route path="/classification" component={Classification}/>
+						<Route path="/essay" component={Essay}/>
 						<Route path="/about" component={About}/>
 					</div>
 				</div>

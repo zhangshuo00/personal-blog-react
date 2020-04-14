@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Collapse, Icon, Tag } from 'antd'
+import { CaretRightOutlined, GithubOutlined, GoogleOutlined } from '@ant-design/icons';
+import { Collapse, Tag } from 'antd';
 import '../../css/sider.css'
 
 const { Panel } = Collapse;
@@ -20,11 +21,11 @@ export default class Sider extends Component {
                 <p>这个人很懒，什么也没有写...</p>
                 <ul className="sider-pages">
                     <li>
-                        <Icon type="github"/>
+                        <GithubOutlined />
                         <a style={{paddingLeft:'5px',color:'rgb(0,0,0,0.65)'}} href="https://github.com/zhangshuo00">github</a>
                     </li>
                     <li style={{paddingLeft:'10px'}}>
-                        <Icon type="google" />
+                        <GoogleOutlined />
                         <a style={{paddingLeft:'5px',color:'rgb(0,0,0,0.65)'}} href="easonzhang5002@gmail.com">Gmail</a>
                     </li>
                 </ul>
@@ -33,7 +34,7 @@ export default class Sider extends Component {
                     style={{marginTop:'25px'}}
                     bordered={false}
                     defaultActiveKey={['1','2']}
-                    expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
+                    expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
                 >
                     <Panel header="热门文章" key="1" style={customPanelStyle}>
                         <ul>
@@ -53,6 +54,6 @@ export default class Sider extends Component {
                 
                 
             </div>
-        )
+        );
     }
 }

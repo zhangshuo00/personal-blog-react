@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {Input, Menu, Icon, Button} from 'antd'
+import { FolderOutlined, HddOutlined, HomeOutlined, UserOutlined, BookOutlined } from '@ant-design/icons';
+import { Input, Menu, Button } from 'antd';
 import "../../css/header.css"
 
 const {Search} = Input;
@@ -44,19 +45,23 @@ export default class Header extends Component {
                     />
                     <Menu style={{marginLeft:'20px',float:'left',width:'45%'}} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                         <Menu.Item key='home'>
-                            <Icon type="home"/>
+                            <HomeOutlined />
                             首页
                         </Menu.Item>
                         <Menu.Item key='archives'>
-                            <Icon type="hdd"/>
+                            <HddOutlined />
                             归档
                         </Menu.Item>
                         <Menu.Item key='classification'>
-                            <Icon type="folder"/>
+                            <FolderOutlined />
                             分类
                         </Menu.Item>
+                        <Menu.Item key='essay'>
+                            <BookOutlined/>
+                            随笔
+                        </Menu.Item>
                         <Menu.Item key='about'>
-                            <Icon type="user"/>
+                            <UserOutlined />
                             关于
                         </Menu.Item>
                     </Menu>
@@ -66,6 +71,6 @@ export default class Header extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
